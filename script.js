@@ -1,58 +1,11 @@
-var KanjiArray = [
-    {
-        "name": "claim",
-        "english": "требовать"
-    }, 
-    {
-        "name": "broad",
-        "english": "широкий"
-    },
-    {
-        "name": "select",
-        "english": "выбирать"
-    },
-    {
-        "name": "property",
-        "english": "собственность"
-    },
-    {
-        "name": "noise",
-        "english": "шум"
-    },
-    {
-        "name": "opposite",
-        "english": "противоположный"
-    },
-    {
-        "name": "term",
-        "english": "срок"
-    },
-    {
-        "name": "smell",
-        "english": "запах"
-    },
-    {
-        "name": "evidence",
-        "english": "доказательства"
-    },
-    {
-        "name": "speech",
-        "english": "речь"
-    },
-    {
-        "name": "safe",
-        "english": "безопасный"
-    },
-    {
-        "name": "pick",
-        "english": "выбирать"
-    },
-    {
-        "name": "NAME",
-        "english": "TRANSLATE"
-    },
-];
+/* 
 
+{
+    "name": "NAME",
+    "english": "TRANSLATE"
+},
+
+*/
 
 var Card = (function Card(kanjilist) {
   var kanji;
