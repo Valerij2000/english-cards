@@ -360,8 +360,8 @@ var KanjiArray = [
         "english": "устонавливать"
     },
     {
-        "name": "ad once",
-        "english": "одныжды"
+        "name": "at once",
+        "english": "однажды"
     },
     {
         "name": "least",

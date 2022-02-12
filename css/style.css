@@ -35,8 +35,9 @@ html, body {
   transform: rotateY(89.5deg);
 }
 .KanjiCard_kanji {
-  font-size: 40pt;
+  font-size: 32pt;
   padding-bottom: 20px;
+  padding-top: 60px;
 }
 .KanjiCard_kana {
   font-size: 14pt;
