@@ -32,9 +32,9 @@ var Card = (function Card(kanjilist) {
   
   function newCard() {
     var newKanji = _.sample(kanji);
-    $kanjifield.html(newKanji.name);
+    $kanjifield.html(newKanji.english);
     $kanafield.html('<button type="button" id="button-translate" class="btn third">Translate</button>');
-    $translatefield.html(newKanji.english);
+    $translatefield.html(newKanji.name);
     $buttonTranslate = $('#button-translate');
     $buttonTranslate.on("click", () => {
         $translatefield.removeClass('hidden');
