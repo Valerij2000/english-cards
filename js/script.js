@@ -846,8 +846,8 @@ var Card = (function Card() {
   }
 
   function handleLng() {
-
     var resetTime = (function() {
+        $flagStarting = false;
         $lng.on('click', function (){
             $unit.removeClass('hidden');
             $('.KanjiCard').addClass('bg-white');
@@ -862,32 +862,20 @@ var Card = (function Card() {
             }
         });
     })
-
     var setTime = (function() {
         var executed = false;
         return function() {
             if (!executed) {
                 executed = true;
                 $lng.on('click', () => {
-                    let $this = $(this);
                     setTimeout(() => {
-                        if ($this.html() == '<img src="img/usa.png" id="usa" class="usa" alt="usa">') {
-                            $this.html('<img src="img/ru.png" id="ru" class="ru" alt="ru">');
-                            newCard('english', 'name');
-                            $translatefield.addClass('hidden');
-                        } else {
-                            $this.html('<img src="img/usa.png" id="usa" class="usa" alt="usa">');
-                            newCard('name', 'english');
-                            $translatefield.addClass('hidden');
-                        }  
+                        resetTime();
                     }, 6000);
-                    resetTime();
                 });
             }
         };
     })();
-    setTime(); 
-    setTime(); 
+    setTime();
   }
   
   function bindUI() {
