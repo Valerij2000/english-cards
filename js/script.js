@@ -640,6 +640,7 @@ var Card = (function Card() {
   var $lng;
   var $unit;
   var $unitFlag = 1;
+  var $flagStarting = true;
   var $unitTotal = 2; // условие на включительно
   var kanjilist;
 
@@ -845,21 +846,48 @@ var Card = (function Card() {
   }
 
   function handleLng() {
-    $lng.on('click', function (){
-        setTimeout(function() { 
+
+    var resetTime = (function() {
+        $lng.on('click', function (){
             $unit.removeClass('hidden');
+            $('.KanjiCard').addClass('bg-white');
             if ($(this).html() == '<img src="img/usa.png" id="usa" class="usa" alt="usa">') {
-              $(this).html('<img src="img/ru.png" id="ru" class="ru" alt="ru">');
-              newCard('english', 'name');
-              $translatefield.addClass('hidden');
+            $(this).html('<img src="img/ru.png" id="ru" class="ru" alt="ru">');
+                newCard('english', 'name');
+                $translatefield.addClass('hidden');
             } else {
-              $(this).html('<img src="img/usa.png" id="usa" class="usa" alt="usa">');
-              newCard('name', 'english');
-              $translatefield.addClass('hidden');
+                $(this).html('<img src="img/usa.png" id="usa" class="usa" alt="usa">');
+                newCard('name', 'english');
+                $translatefield.addClass('hidden');
             }
-        }, 6000);    
-    });
-    
+        });
+    })
+
+    var setTime = (function() {
+        var executed = false;
+        return function() {
+            if (!executed) {
+                executed = true;
+                $lng.on('click', () => {
+                    let $this = $(this);
+                    setTimeout(() => {
+                        if ($this.html() == '<img src="img/usa.png" id="usa" class="usa" alt="usa">') {
+                            $this.html('<img src="img/ru.png" id="ru" class="ru" alt="ru">');
+                            newCard('english', 'name');
+                            $translatefield.addClass('hidden');
+                        } else {
+                            $this.html('<img src="img/usa.png" id="usa" class="usa" alt="usa">');
+                            newCard('name', 'english');
+                            $translatefield.addClass('hidden');
+                        }  
+                    }, 6000);
+                    resetTime();
+                });
+            }
+        };
+    })();
+    setTime(); 
+    setTime(); 
   }
   
   function bindUI() {
@@ -878,7 +906,6 @@ var Card = (function Card() {
   }
   
   function handleClick() {
-
     newCard('english', 'name');
 
     if ($('#usa').hasClass('usa')) {
