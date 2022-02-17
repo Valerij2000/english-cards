@@ -70,11 +70,9 @@ html, body {
 .third {
   width: 200px;
   height: 50px;
-  border-color: #3498db;
+  background-color: #cfb2af;
+  border: 1px solid #e4cccc;
   color: #fff;
-  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
 }
 .unit {
   position: absolute;
