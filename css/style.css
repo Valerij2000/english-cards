@@ -50,6 +50,7 @@ html, body {
   font-size: 32pt;
   padding-bottom: 20px;
   padding-top: 60px;
+  color: #000000;
 }
 .KanjiCard_kana {
   font-size: 14pt;
@@ -58,6 +59,7 @@ html, body {
 .KanjiCard_translation {
   font-size: 14pt;
   padding: 10px;
+  color: #000000;
 }
 .block {
   display: block;
@@ -74,12 +76,11 @@ html, body {
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
-.third:focus {
-  color: rgb(10, 255, 51);
-}
 .unit {
   position: absolute;
   right: 15px;
   font-size: 15px;
   top: 15px;
+  color: #000000;
+  font-weight: 600;
 }

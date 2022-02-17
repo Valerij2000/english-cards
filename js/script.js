@@ -997,7 +997,7 @@ var Card = (function Card() {
                 $('.lng-ru').on('click', () => {
                     flagChoice('ru');
                 })
-           }, 5000);
+           }, 6000);
         })
     }
 
