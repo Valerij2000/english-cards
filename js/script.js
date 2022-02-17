@@ -630,6 +630,186 @@ var Card = (function Card() {
             "english": "остаток"
         },
     ], 
+    unit3: [
+        {
+            "name": "suffering",
+            "english": "страдающий"
+        },
+        {
+            "name": "incredibly",
+            "english": "невероятно"
+        },
+        {
+            "name": "disgusting",
+            "english": "отврат-ый"
+        },
+        {
+            "name": "presume",
+            "english": "предпологать"
+        },
+        {
+            "name": "deliver",
+            "english": "доставлять"
+        },
+        {
+            "name": "predict",
+            "english": "прогнозировать"
+        },
+        {
+            "name": "hurry",
+            "english": "торопиться"
+        },
+        {
+            "name": "bond",
+            "english": "эмоциональная связь"
+        },
+        {
+            "name": "praise",
+            "english": "хвалить"
+        },
+        {
+            "name": "deserve",
+            "english": "заслуживать"
+        },
+        {
+            "name": "becoming",
+            "english": "подобающий"
+        },
+        {
+            "name": "trap",
+            "english": "ловушка"
+        },
+        {
+            "name": "ownership",
+            "english": "собственность"
+        },
+        {
+            "name": "pretend",
+            "english": "притворяться"
+        },
+        {
+            "name": "queue",
+            "english": "очередь"
+        },
+        {
+            "name": "objection",
+            "english": "возражение"
+        },
+        {
+            "name": "narrow",
+            "english": "узкий"
+        },
+        {
+            "name": "replace",
+            "english": "заменять"
+        },
+        {
+            "name": "trail",
+            "english": "пробный"
+        },
+        {
+            "name": "cope",
+            "english": "справляться"
+        },
+        {
+            "name": "lonely",
+            "english": "одинокий"
+        },
+        {
+            "name": "carry",
+            "english": "нести"
+        },
+        {
+            "name": "contain",
+            "english": "содержать"
+        },
+        {
+            "name": "shame",
+            "english": "позор"
+        },
+        {
+            "name": "suspect",
+            "english": "подозревать"
+        },
+        {
+            "name": "closely",
+            "english": "тесно"
+        },
+        {
+            "name": "rather",
+            "english": "скорее"
+        },
+        {
+            "name": "pattern",
+            "english": "шаблон"
+        },
+        {
+            "name": "someplace",
+            "english": "где-то"
+        },
+        {
+            "name": "payment",
+            "english": "оплата"
+        },
+        {
+            "name": "further",
+            "english": "дальнейшей"
+        },
+        {
+            "name": "suit",
+            "english": "подходить"
+        },
+        {
+            "name": "quantity",
+            "english": "количество"
+        },
+        {
+            "name": "proof",
+            "english": "доказательство"
+        },
+    ],
+    unit4: [
+        {
+            "name": "participate",
+            "english": "принимать участие"
+        },
+        {
+            "name": "goodness",
+            "english": "доброта"
+        },
+        {
+            "name": "madness",
+            "english": "безумный"
+        },
+        {
+            "name": "partly",
+            "english": "частично"
+        },
+        {
+            "name": "suppose",
+            "english": "предположим"
+        },
+        {
+            "name": "confident",
+            "english": "уверенный"
+        },
+        {
+            "name": "blame",
+            "english": "виноват"
+        },
+        {
+            "name": "provosion",
+            "english": "положение"
+        },
+        {
+            "name": "remark",
+            "english": "замечание"
+        },
+        {
+            "name": "detect",
+            "english": "обнаружить"
+        },
+    ],
   }
 
   var kanji;
@@ -641,7 +821,7 @@ var Card = (function Card() {
   var $unit;
   var $unitFlag = 1;
   var $flagStarting = true;
-  var $unitTotal = 2; // условие на включительно
+  var $unitTotal = 4; // условие на включительно
   var kanjilist;
 
   function init() {
@@ -846,8 +1026,26 @@ var Card = (function Card() {
   }
 
   function handleLng() {
-    var resetTime = (function() {
-        $flagStarting = false;
+
+   var totalTime = (function() {
+
+    var setTime = (function() {
+        var executed = false;
+        return function() {
+            if (!executed) {
+                executed = true;
+                $lng.on('click', () => {
+                    setTimeout(() => {
+                        resetTime();
+                    }, 6000);
+                });
+            } 
+        };
+    })();
+    setTime();
+    setTime();
+
+    function resetTime() {
         $lng.on('click', function (){
             $unit.removeClass('hidden');
             $('.KanjiCard').addClass('bg-white');
@@ -861,21 +1059,13 @@ var Card = (function Card() {
                 $translatefield.addClass('hidden');
             }
         });
+        totalTime();
+    }
+        
     })
-    var setTime = (function() {
-        var executed = false;
-        return function() {
-            if (!executed) {
-                executed = true;
-                $lng.on('click', () => {
-                    setTimeout(() => {
-                        resetTime();
-                    }, 6000);
-                });
-            }
-        };
-    })();
-    setTime();
+
+    totalTime();
+
   }
   
   function bindUI() {
