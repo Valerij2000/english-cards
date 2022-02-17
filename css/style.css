@@ -73,6 +73,10 @@ html, body {
   background-color: #cfb2af;
   border: 1px solid #e4cccc;
   color: #fff;
+  outline: none;
+}
+.third:focus {
+  outline: none;
 }
 .unit {
   position: absolute;
