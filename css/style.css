@@ -21,6 +21,11 @@ html, body {
   height: 100%;
 }
 
+#lng {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .bg-white {
   background: #ffffff !important;
 }
