@@ -809,6 +809,14 @@ var Card = (function Card() {
                 "name": "detect",
                 "english": "обнаружить"
             },
+            {
+                "name": "ensure",
+                "english": "обеспечивать"
+            },
+            {
+                "name": "belongs",
+                "english": "принадлежать"
+            },
         ],
     }
 
