@@ -831,9 +831,12 @@ var Card = (function Card() {
     var $unitTotal = 7; // условие на включительно
     var kanjilist;
     var $progressStart;
+    var $renderContent;
 
     function init() {
+        $renderContent = $('#rendering-words-list');
         $progressStart = $('#progress');
+        $modal = $('#modal');
         $lng = $('#lng');
         $unit = $('#unit');
         $kanjifield = $("#kanji");
@@ -845,6 +848,25 @@ var Card = (function Card() {
         initUnitGenerate();
         start();
         UIpreloadStart();
+    }
+
+    function modalWordsList() {
+        $modal.removeClass('hidden');
+        renderingWordsList(kanji);
+    }
+
+    function renderingWordsList(list) {
+        for(let i=0; i<list.length; i++) {
+            let words = `
+                <span class="list-words"> ${list[i].name} - ${list[i].english}</span> 
+            `;
+            $renderContent.append(words);
+        }
+    }
+
+    function cleanrModalWordsList() {
+        $renderContent.empty();
+        modalWordsList();
     }
 
     function renderJSONUnits() {
@@ -978,10 +1000,12 @@ var Card = (function Card() {
                 $unitFlag++;
                 $unit.html(`<strong class="unit"> Unit ${$unitFlag} </strong>`);
                 initUnitGenerate();
+                cleanrModalWordsList();
             } else {
                 $unitFlag = 1;
                 $unit.html(`<strong class="unit"> Unit ${$unitFlag} </strong>`);
                 initUnitGenerate();
+                cleanrModalWordsList();
             }
         })
     }
@@ -1033,6 +1057,7 @@ var Card = (function Card() {
     }
 
     function flagChoice(flag) {
+        modalWordsList();
         $unit.removeClass('hidden');
             if (flag == 'en') {
                 $lng.html('<img src="img/ru.png" id="ru" class="ru" alt="ru">');
