@@ -828,7 +828,7 @@ var Card = (function Card() {
     var $lng;
     var $unit;
     var $unitFlag = 1;
-    var $unitTotal = 4; // условие на включительно
+    var $unitTotal = 7; // условие на включительно
     var kanjilist;
     var $progressStart;
 
@@ -841,9 +841,32 @@ var Card = (function Card() {
         $translatefield = $("#translation");
         $translatefield.addClass('hidden');
         $card = $("#kanji");
+        renderJSONUnits();
         initUnitGenerate();
         start();
         UIpreloadStart();
+    }
+
+    function renderJSONUnits() {
+        const jsonUnitsNumber = ['unit5', 'unit6', 'unit7'];
+        for(let i=0; i<jsonUnitsNumber.length; i++) {
+            $.getJSON(`json/${jsonUnitsNumber[i]}.json`, function(data) {
+                // console.log(data);
+                let arrayUnits = [];
+                units[jsonUnitsNumber[i]] = arrayUnits;
+                for(let j=0; j<data.length; j++) {
+                    // console.log(data[j]);
+                    arrayUnits.push(
+                        new Object({
+                            name: data[j][0],
+                            english: data[j][1] 
+                        })
+                    );
+                    // console.log(units[jsonUnitsNumber[i]])
+                }
+            });
+        }
+        // console.log(units);
     }
 
     function UIpreloadStart() {
