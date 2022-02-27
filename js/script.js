@@ -817,6 +817,22 @@ var Card = (function Card() {
                 "name": "belongs",
                 "english": "принадлежать"
             },
+            {
+                "name": "glance",
+                "english": "взгяд"
+            },
+            {
+                "name": "adjust",
+                "english": "регулировать, корректировать"
+            },
+            {
+                "name": "Fee",
+                "english": "комиссия"
+            },
+            {
+                "name": "estimated",
+                "english": "ориентировочный"
+            },
         ],
     }
 
