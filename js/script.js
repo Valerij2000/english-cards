@@ -10,8 +10,7 @@
 var Card = (function Card() {
 
     var units = {
-        unit1: [
-            {
+        unit1: [{
                 "name": "claim",
                 "english": "требовать"
             },
@@ -480,360 +479,6 @@ var Card = (function Card() {
                 "english": "довольно"
             },
         ],
-        unit2: [
-            {
-                "name": "erase",
-                "english": "стирать(из памяти)"
-            },
-            {
-                "name": "knack",
-                "english": "талант"
-            },
-            {
-                "name": "pity",
-                "english": "жалость"
-            },
-            {
-                "name": "wise",
-                "english": "мудрый"
-            },
-            {
-                "name": "generous",
-                "english": "щедрый"
-            },
-            {
-                "name": "stubborn",
-                "english": "упрямый"
-            },
-            {
-                "name": "fix",
-                "english": "чинить"
-            },
-            {
-                "name": "mood",
-                "english": "настроение"
-            },
-            {
-                "name": "relief",
-                "english": "облегчение"
-            },
-            {
-                "name": "boring",
-                "english": "скучный"
-            },
-            {
-                "name": "cause",
-                "english": "причинять"
-            },
-            {
-                "name": "join",
-                "english": "соединять"
-            },
-            {
-                "name": "damage",
-                "english": "повреждать"
-            },
-            {
-                "name": "care",
-                "english": "заботиться"
-            },
-            {
-                "name": "fold",
-                "english": "складывать"
-            },
-            {
-                "name": "regret",
-                "english": "сожалеть"
-            },
-            {
-                "name": "lead",
-                "english": "вести"
-            },
-            {
-                "name": "promise",
-                "english": "обещание"
-            },
-            {
-                "name": "forces",
-                "english": "усилие"
-            },
-            {
-                "name": "farawell",
-                "english": "прощание"
-            },
-            {
-                "name": "shore",
-                "english": "берег"
-            },
-            {
-                "name": "knowledge",
-                "english": "знание"
-            },
-            {
-                "name": "groceries",
-                "english": "продукты"
-            },
-            {
-                "name": "tiny",
-                "english": "крошечный"
-            },
-            {
-                "name": "chores",
-                "english": "работа по дому"
-            },
-            {
-                "name": "agreed",
-                "english": "договорились"
-            },
-            {
-                "name": "laughing",
-                "english": "смеяться"
-            },
-            {
-                "name": "luckily",
-                "english": "к счастью"
-            },
-            {
-                "name": "successful",
-                "english": "успешный"
-            },
-            {
-                "name": "success",
-                "english": "успех"
-            },
-            {
-                "name": "afraid",
-                "english": "бояться"
-            },
-            {
-                "name": "puddle",
-                "english": "лужа"
-            },
-            {
-                "name": "tailwind",
-                "english": "попутный ветер"
-            },
-            {
-                "name": "approximately",
-                "english": "приблизительно"
-            },
-            {
-                "name": "schedule",
-                "english": "график"
-            },
-            {
-                "name": "beverage",
-                "english": "напиток"
-            },
-            {
-                "name": "rest",
-                "english": "остаток"
-            },
-        ],
-        unit3: [
-            {
-                "name": "suffering",
-                "english": "страдающий"
-            },
-            {
-                "name": "incredibly",
-                "english": "невероятно"
-            },
-            {
-                "name": "disgusting",
-                "english": "отврат-ый"
-            },
-            {
-                "name": "presume",
-                "english": "предпологать"
-            },
-            {
-                "name": "deliver",
-                "english": "доставлять"
-            },
-            {
-                "name": "predict",
-                "english": "прогнозировать"
-            },
-            {
-                "name": "hurry",
-                "english": "торопиться"
-            },
-            {
-                "name": "bond",
-                "english": "эмоциональная связь"
-            },
-            {
-                "name": "praise",
-                "english": "хвалить"
-            },
-            {
-                "name": "deserve",
-                "english": "заслуживать"
-            },
-            {
-                "name": "becoming",
-                "english": "подобающий"
-            },
-            {
-                "name": "trap",
-                "english": "ловушка"
-            },
-            {
-                "name": "ownership",
-                "english": "собственность"
-            },
-            {
-                "name": "pretend",
-                "english": "притворяться"
-            },
-            {
-                "name": "queue",
-                "english": "очередь"
-            },
-            {
-                "name": "objection",
-                "english": "возражение"
-            },
-            {
-                "name": "narrow",
-                "english": "узкий"
-            },
-            {
-                "name": "replace",
-                "english": "заменять"
-            },
-            {
-                "name": "trail",
-                "english": "пробный"
-            },
-            {
-                "name": "cope",
-                "english": "справляться"
-            },
-            {
-                "name": "lonely",
-                "english": "одинокий"
-            },
-            {
-                "name": "carry",
-                "english": "нести"
-            },
-            {
-                "name": "contain",
-                "english": "содержать"
-            },
-            {
-                "name": "shame",
-                "english": "позор"
-            },
-            {
-                "name": "suspect",
-                "english": "подозревать"
-            },
-            {
-                "name": "closely",
-                "english": "тесно"
-            },
-            {
-                "name": "rather",
-                "english": "скорее"
-            },
-            {
-                "name": "pattern",
-                "english": "шаблон"
-            },
-            {
-                "name": "someplace",
-                "english": "где-то"
-            },
-            {
-                "name": "payment",
-                "english": "оплата"
-            },
-            {
-                "name": "further",
-                "english": "дальнейшей"
-            },
-            {
-                "name": "suit",
-                "english": "подходить"
-            },
-            {
-                "name": "quantity",
-                "english": "количество"
-            },
-            {
-                "name": "proof",
-                "english": "доказательство"
-            },
-        ],
-        unit4: [
-            {
-                "name": "participate",
-                "english": "принимать участие"
-            },
-            {
-                "name": "goodness",
-                "english": "доброта"
-            },
-            {
-                "name": "madness",
-                "english": "безумный"
-            },
-            {
-                "name": "partly",
-                "english": "частично"
-            },
-            {
-                "name": "suppose",
-                "english": "предположим"
-            },
-            {
-                "name": "confident",
-                "english": "уверенный"
-            },
-            {
-                "name": "blame",
-                "english": "виноват"
-            },
-            {
-                "name": "provosion",
-                "english": "положение"
-            },
-            {
-                "name": "remark",
-                "english": "замечание"
-            },
-            {
-                "name": "detect",
-                "english": "обнаружить"
-            },
-            {
-                "name": "ensure",
-                "english": "обеспечивать"
-            },
-            {
-                "name": "belongs",
-                "english": "принадлежать"
-            },
-            {
-                "name": "glance",
-                "english": "взгяд"
-            },
-            {
-                "name": "adjust",
-                "english": "регулировать, корректировать"
-            },
-            {
-                "name": "Fee",
-                "english": "комиссия"
-            },
-            {
-                "name": "estimated",
-                "english": "ориентировочный"
-            },
-        ],
     }
 
     var kanji;
@@ -844,7 +489,9 @@ var Card = (function Card() {
     var $lng;
     var $unit;
     var $unitFlag = 1;
-    var $unitTotal = 7; // условие на включительно
+    var $unitTotal = 5; // количество юнитов на странице (условие на включительно)
+    var $pageCount = 2; // страницы (включительно)
+    var $pagenow = null;
     var kanjilist;
     var $progressStart;
     var $renderContent;
@@ -860,10 +507,19 @@ var Card = (function Card() {
         $translatefield = $("#translation");
         $translatefield.addClass('hidden');
         $card = $("#kanji");
+        selectPage();
         renderJSONUnits();
         initUnitGenerate();
         start();
         UIpreloadStart();
+    }
+
+    function selectPage() {
+        for (let i = 1; i <= $pageCount; i++) {
+            if ($(".wrapper").data("page") === i) {
+                $pagenow = i;
+            }
+        }
     }
 
     function modalWordsList() {
@@ -872,7 +528,7 @@ var Card = (function Card() {
     }
 
     function renderingWordsList(list) {
-        for(let i=0; i<list.length; i++) {
+        for (let i = 0; i < list.length; i++) {
             let words = `
                 <span class="list-words"> ${list[i].name} - ${list[i].english}</span> 
             `;
@@ -886,18 +542,18 @@ var Card = (function Card() {
     }
 
     function renderJSONUnits() {
-        const jsonUnitsNumber = ['unit5', 'unit6', 'unit7'];
-        for(let i=0; i<jsonUnitsNumber.length; i++) {
-            $.getJSON(`json/${jsonUnitsNumber[i]}.json`, function(data) {
+        const jsonUnitsNumber = ['unit1', 'unit2', 'unit3', 'unit4', 'unit5'];
+        for (let i = 0; i < jsonUnitsNumber.length; i++) {
+            $.getJSON(`json/page-${$pagenow}/${jsonUnitsNumber[i]}.json`, function(data) {
                 // console.log(data);
                 let arrayUnits = [];
                 units[jsonUnitsNumber[i]] = arrayUnits;
-                for(let j=0; j<data.length; j++) {
+                for (let j = 0; j < data.length; j++) {
                     // console.log(data[j]);
                     arrayUnits.push(
                         new Object({
                             name: data[j][0],
-                            english: data[j][1] 
+                            english: data[j][1]
                         })
                     );
                     // console.log(units[jsonUnitsNumber[i]])
@@ -914,8 +570,8 @@ var Card = (function Card() {
         $$('.button').forEach(button => {
 
             let count = {
-                number: 0
-            },
+                    number: 0
+                },
                 icon = $('.icon', button),
                 iconDiv = $('.icon > div', button),
                 arrow = $('.icon .arrow', button),
@@ -970,16 +626,16 @@ var Card = (function Card() {
 
         function getPoint(point, i, a, smoothing) {
             let cp = (current, previous, next, reverse) => {
-                let p = previous || current,
-                    n = next || current,
-                    o = {
-                        length: Math.sqrt(Math.pow(n[0] - p[0], 2) + Math.pow(n[1] - p[1], 2)),
-                        angle: Math.atan2(n[1] - p[1], n[0] - p[0])
-                    },
-                    angle = o.angle + (reverse ? Math.PI : 0),
-                    length = o.length * smoothing;
-                return [current[0] + Math.cos(angle) * length, current[1] + Math.sin(angle) * length];
-            },
+                    let p = previous || current,
+                        n = next || current,
+                        o = {
+                            length: Math.sqrt(Math.pow(n[0] - p[0], 2) + Math.pow(n[1] - p[1], 2)),
+                            angle: Math.atan2(n[1] - p[1], n[0] - p[0])
+                        },
+                        angle = o.angle + (reverse ? Math.PI : 0),
+                        length = o.length * smoothing;
+                    return [current[0] + Math.cos(angle) * length, current[1] + Math.sin(angle) * length];
+                },
                 cps = cp(a[i - 1], a[i - 2], point, false),
                 cpe = cp(point, a[i - 1], a[i + 1], true);
             return `C ${cps[0]},${cps[1]} ${cpe[0]},${cpe[1]} ${point[0]},${point[1]}`;
@@ -987,10 +643,10 @@ var Card = (function Card() {
 
         function getPath(update, first, last, smoothing, pointsNew) {
             let points = pointsNew ? pointsNew : [
-                [first, 16],
-                [20, update],
-                [last, 16]
-            ],
+                    [first, 16],
+                    [20, update],
+                    [last, 16]
+                ],
                 d = points.reduce((acc, point, i, a) => i === 0 ? `M ${point[0]},${point[1]}` : `${acc} ${getPoint(point, i, a, smoothing)}`, '');
             return `<path d="${d}" />`;
         }
@@ -1002,7 +658,7 @@ var Card = (function Card() {
     }
 
     function start() {
-        newCard();
+        // newCard();
         unitCreate();
         buttonProgressStart();
         bindUI();
@@ -1068,29 +724,29 @@ var Card = (function Card() {
                 $('.lng-ru').on('click', () => {
                     flagChoice('ru');
                 })
-           }, 6000);
+            }, 6000);
         })
     }
 
     function flagChoice(flag) {
         modalWordsList();
         $unit.removeClass('hidden');
-            if (flag == 'en') {
-                $lng.html('<img src="img/ru.png" id="ru" class="ru" alt="ru">');
-                newCard('english', 'name');
-                $translatefield.addClass('hidden');
-            } else {
-                $lng.html('<img src="img/usa.png" id="usa" class="usa" alt="usa">');
-                newCard('name', 'english');
-                $translatefield.addClass('hidden');
-            }
-            handleLng();
+        if (flag == 'en') {
+            $lng.html('<img src="img/ru.png" id="ru" class="ru" alt="ru">');
+            newCard('english', 'name');
+            $translatefield.addClass('hidden');
+        } else {
+            $lng.html('<img src="img/usa.png" id="usa" class="usa" alt="usa">');
+            newCard('name', 'english');
+            $translatefield.addClass('hidden');
+        }
+        handleLng();
     }
 
     function handleLng() {
         $lng.on('click', choiceLanguage);
 
-        function choiceLanguage () {
+        function choiceLanguage() {
             $unit.removeClass('hidden');
             if ($(this).html() == '<img src="img/usa.png" id="usa" class="usa" alt="usa">') {
                 $(this).html('<img src="img/ru.png" id="ru" class="ru" alt="ru">');

@@ -1,88 +1,113 @@
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
+html,
+body {
+    width: 100%;
+    height: 100%;
 }
 
 .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: 1px solid blue;
-  background-image: url('../img/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid blue;
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 #lng {
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .bg-white {
-  background: #ffffff !important;
+    background: #ffffff !important;
 }
 
 .KanjiCard {
-  position: relative;
-  width: 350px;
-  min-height: 400px;
-  text-align: center;
-  background: #e2b8b8a3;
-  border: 2px solid #e4cccc;
-  border-radius: 5px;
-  box-shadow: 0 4px 20px -3px gray;
-  padding: 20px;
-  outline: none;
+    position: relative;
+    width: 350px;
+    min-height: 400px;
+    text-align: center;
+    background: #e2b8b8a3;
+    border: 2px solid #e4cccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px -3px gray;
+    padding: 20px;
+    outline: none;
 }
 
 .KanjiCard-rotate {
-  transform: rotateY(89.5deg);
+    transform: rotateY(89.5deg);
 }
+
 .KanjiCard_kanji {
-  font-size: 32pt;
-  padding-bottom: 20px;
-  padding-top: 60px;
-  color: #000000;
+    font-size: 32pt;
+    padding-bottom: 20px;
+    padding-top: 60px;
+    color: #000000;
 }
+
 .KanjiCard_kana {
-  font-size: 14pt;
-  padding: 10px;
+    font-size: 14pt;
+    padding: 10px;
 }
+
 .KanjiCard_translation {
-  font-size: 16pt;
-  padding: 10px;
-  color: #000000;
+    font-size: 16pt;
+    padding: 10px;
+    color: #000000;
 }
+
 .block {
-  display: block;
+    display: block;
 }
+
 .hidden {
-  display: none;
+    display: none;
 }
+
 .third {
-  width: 200px;
-  height: 50px;
-  background-color: #cfb2af;
-  border: 1px solid #e4cccc;
-  color: #fff;
-  outline: none;
+    width: 200px;
+    height: 50px;
+    background-color: #cfb2af;
+    border: 1px solid #e4cccc;
+    color: #fff;
+    outline: none;
 }
+
 .third:focus {
-  outline: none;
+    outline: none;
 }
+
 .unit {
-  position: absolute;
-  right: 15px;
-  font-size: 15px;
-  top: 15px;
-  color: #000000;
-  font-weight: 600;
+    position: absolute;
+    right: 15px;
+    font-size: 15px;
+    top: 15px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.exit {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    width: 60px;
+    height: 50px;
+    cursor: pointer;
+}
+
+@media (min-width: 992px) {
+    .exit {
+        width: 70px;
+        height: 60px;
+    }
 }
