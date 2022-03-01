@@ -23,7 +23,7 @@ function renderJSONUnits() {
     let arrayUnits;
     const jsonUnitsNumber = ['unit1', 'unit2', 'unit3', 'unit4', 'unit5'];
     for (let i = 0; i < jsonUnitsNumber.length; i++) {
-        $.getJSON(`json/page-${$pagenow}/${jsonUnitsNumber[i]}.json`, function(data) {
+        $.getJSON(`../json/page-${$pagenow}/${jsonUnitsNumber[i]}.json`, function(data) {
             // console.log(data);
             arrayUnits = [];
             units[jsonUnitsNumber[i]] = arrayUnits;
@@ -246,10 +246,10 @@ var Card = (function Card() {
                 $progressStart.addClass('hidden');
                 $lng.html(`
                     <div class="lng-en">
-                        <img src="img/usa.png" id="usa" class="usa" alt="usa">
+                        <img src="../img/usa.png" id="usa" class="usa" alt="usa">
                     </div>
                     <div class="lng-ru">
-                        <img src="img/ru.png" id="ru" class="ru" alt="ru">
+                        <img src="../img/ru.png" id="ru" class="ru" alt="ru">
                     </div>
                 `);
                 $('.lng-en').on('click', () => {
@@ -266,11 +266,11 @@ var Card = (function Card() {
         modalWordsList();
         $unit.removeClass('hidden');
         if (flag == 'en') {
-            $lng.html('<img src="img/ru.png" id="ru" class="ru" alt="ru">');
+            $lng.html('<img src="../img/ru.png" id="ru" class="ru" alt="ru">');
             newCard('english', 'name');
             $translatefield.addClass('hidden');
         } else {
-            $lng.html('<img src="img/usa.png" id="usa" class="usa" alt="usa">');
+            $lng.html('<img src="../img/usa.png" id="usa" class="usa" alt="usa">');
             newCard('name', 'english');
             $translatefield.addClass('hidden');
         }
@@ -282,12 +282,12 @@ var Card = (function Card() {
 
         function choiceLanguage() {
             $unit.removeClass('hidden');
-            if ($(this).html() == '<img src="img/usa.png" id="usa" class="usa" alt="usa">') {
-                $(this).html('<img src="img/ru.png" id="ru" class="ru" alt="ru">');
+            if ($(this).html() == '<img src="../img/usa.png" id="usa" class="usa" alt="usa">') {
+                $(this).html('<img src="../img/ru.png" id="ru" class="ru" alt="ru">');
                 newCard('english', 'name');
                 $translatefield.addClass('hidden');
             } else {
-                $(this).html('<img src="img/usa.png" id="usa" class="usa" alt="usa">');
+                $(this).html('<img src="../img/usa.png" id="usa" class="usa" alt="usa">');
                 newCard('name', 'english');
                 $translatefield.addClass('hidden');
             }
