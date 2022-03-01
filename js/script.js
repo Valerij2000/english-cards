@@ -7,48 +7,14 @@
 
 */
 
-var units = {}
-var $pageCount = 2; // страницы (включительно)
-var $pagenow = null;
-
-function selectPage() {
-    for (let i = 1; i <= $pageCount; i++) {
-        if ($(".wrapper").data("page") === i) {
-            $pagenow = i;
-        }
-    }
-}
-
-function renderJSONUnits() {
-    let arrayUnits;
-    const jsonUnitsNumber = ['unit1', 'unit2', 'unit3', 'unit4', 'unit5'];
-    for (let i = 0; i < jsonUnitsNumber.length; i++) {
-        $.getJSON(`../json/page-${$pagenow}/${jsonUnitsNumber[i]}.json`, function(data) {
-            // console.log(data);
-            arrayUnits = [];
-            units[jsonUnitsNumber[i]] = arrayUnits;
-            for (let j = 0; j < data.length; j++) {
-                // console.log(data[j]);
-                arrayUnits.push(
-                    new Object({
-                        name: data[j][0],
-                        english: data[j][1]
-                    })
-                );
-                // console.log(units[jsonUnitsNumber[i]])
-            }
-        });
-    }
-    // console.log(units);
-}
-
-selectPage();
-renderJSONUnits();
-
-
-
 var Card = (function Card() {
 
+    var units = {
+        unit1: [{
+            name: '',
+            english: ''
+        }]
+    }
     var kanji;
     var $kanjifield;
     var $kanafield;
@@ -58,6 +24,8 @@ var Card = (function Card() {
     var $unit;
     var $unitFlag = 1;
     var $unitTotal = 5; // количество юнитов на странице (условие на включительно)
+    var $pageCount = 2; // страницы (включительно)
+    var $pagenow = null;
     var kanjilist;
     var $progressStart;
     var $renderContent;
@@ -73,9 +41,39 @@ var Card = (function Card() {
         $translatefield = $("#translation");
         $translatefield.addClass('hidden');
         $card = $("#kanji");
+        selectPage();
+        renderJSONUnits();
         initUnitGenerate();
         start();
         UIpreloadStart();
+    }
+
+    function selectPage() {
+        for (let i = 1; i <= $pageCount; i++) {
+            if ($(".wrapper").data("page") === i) {
+                $pagenow = i;
+            }
+        }
+    }
+
+    function renderJSONUnits() {
+        let arrayUnits;
+        const jsonUnitsNumber = ['unit1', 'unit2', 'unit3', 'unit4', 'unit5'];
+        for (let i = 0; i < jsonUnitsNumber.length; i++) {
+            $.getJSON(`../json/page-${$pagenow}/${jsonUnitsNumber[i]}.json`, function(data) {
+                // console.log(data);
+                arrayUnits = [];
+                units[jsonUnitsNumber[i]] = arrayUnits;
+                for (let j = 0; j < data.length; j++) {
+                    arrayUnits.push(
+                        new Object({
+                            name: data[j][0],
+                            english: data[j][1]
+                        })
+                    );
+                }
+            });
+        }
     }
 
     function modalWordsList() {
@@ -213,6 +211,11 @@ var Card = (function Card() {
                 initUnitGenerate();
                 cleanrModalWordsList();
             }
+        })
+
+        $lng.on('click', async function gen() {
+            initUnitGenerate();
+            cleanrModalWordsList();
         })
     }
 
