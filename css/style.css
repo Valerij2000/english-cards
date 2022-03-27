@@ -53,6 +53,7 @@ body {
     padding-bottom: 20px;
     padding-top: 60px;
     color: #000000;
+    word-wrap: break-word;
 }
 
 .KanjiCard_kana {
