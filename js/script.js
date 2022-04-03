@@ -24,7 +24,7 @@ var Card = (function Card() {
     var $unit;
     var $unitFlag = 1;
     var $unitTotal = 5; // количество юнитов на странице (условие на включительно)
-    var $pageCount = 2; // страницы (включительно)
+    var $pageCount = 3; // страницы (включительно)
     var $pagenow = null;
     var kanjilist;
     var $progressStart;
