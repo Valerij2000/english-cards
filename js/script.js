@@ -46,6 +46,15 @@ var Card = (function Card() {
         initUnitGenerate();
         start();
         UIpreloadStart();
+        keydownNewCard();
+    }
+
+    function keydownNewCard() {
+        document.addEventListener('keydown', function(event) {
+            if (event.code == 'Space') {
+                handleClick();
+            }
+        });
     }
 
     function selectPage() {
