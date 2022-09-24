@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+  <title>Enslish Cards Admin</title>
+</head>
+
+<body>
+  <!-- <button class="mui-btn mui-btn--fab mui-btn--accent floating-btn" id="modal-btn">Все</button> -->
+  <div id="sidebar">
+    <div class="mui--text-white mui--text-display1 mui--align-vertical">
+      Enslish Cards
+      <br>
+      <button class="mui-btn mui-btn--raised block" data-change-content>Toggle Form</button>
+      <a href="../login.html" class="mui-btn mui-btn--raised block">Comback</a>
+      <small class="author">by Marina</small>
+    </div>
+  </div>
+  <div id="content" class="mui-container-fluid">
+    <div class="mui-row" data-content>
+      <div class="mui-col-sm-10 mui-col-sm-offset-1">
+        <br>
+        <br>
+        <div class="mui--text-black-54 mui--text-body2">Input Vords</div>
+        <div class="mui-divider"></div>
+        <br>
+        <form class="mui-form" id="form">
+          <div class="mui-textfield mui-textfield--float-label">
+            <input type="text" en-input required>
+            <label>English</label>
+          </div>
+          <div class="mui-textfield mui-textfield--float-label">
+            <input type="text" ru-input required>
+            <label>Russian</label>
+          </div>
+          <button type="submit" id="submit" disabled class="mui-btn mui-btn--raised mui-btn--primary">
+            Save vords
+          </button>
+        </form>
+        <br>
+        <br>
+        <div class="mui--text-black-54 mui--text-body2">
+          <h2>You're typing vords</h2>
+        </div>
+        <div class="mui-divider"></div>
+        <br>
+        <table class="mui-table mui-table--bordered">
+          <thead>
+            <tr>
+              <th>English</th>
+              <th>Russian</th>
+            </tr>
+          </thead>
+          <tbody id="list"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="mui-row hidden" data-list>
+      <div class="mui-col-sm-10 mui-col-sm-offset-1 pt-10">
+        <br><br>
+        <div class="mui-panel">
+          <strong>Vords List</strong>
+        </div>
+        <table class="mui-table">
+          <thead>
+            <tr>
+              <th>English</th>
+              <th>Russian</th>
+            </tr>
+          </thead>
+          <tbody id="render-vords">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript" src="bundle.6aa3fe5537290adca8ac.js"></script></body>
+
+</html>
