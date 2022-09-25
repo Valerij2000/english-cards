@@ -1,4 +1,12 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -52,6 +60,7 @@ a {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -81,9 +90,11 @@ a {
   padding: 2.4rem;
   background: #ffebee;
   background-clip: padding-box;
+  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
   opacity: 0;
   -webkit-transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -109,6 +120,7 @@ a {
   -ms-user-select: none;
   user-select: none;
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -124,10 +136,12 @@ a {
   right: 0;
   bottom: 0;
   -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
   opacity: 0.3;
   -webkit-transition: opacity 0.1s ease-out, -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: opacity 0.1s ease-out, -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -169,6 +183,8 @@ img {
   -ms-flex-pack: center;
   justify-content: center;
   -ms-flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-flow: column wrap;
 }
 
@@ -200,6 +216,7 @@ img {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -224,12 +241,15 @@ img {
 .logo img {
   width: 45px;
   -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
   transform: rotate(0);
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .logo img:hover {
   -webkit-transform: rotate(180deg) scale(1.1);
+  -ms-transform: rotate(180deg) scale(1.1);
   transform: rotate(180deg) scale(1.1);
 }

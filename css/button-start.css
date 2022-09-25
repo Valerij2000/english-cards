@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .button {
   --default: rgba(255, 255, 255, 0.2);
   --active: #fff;
@@ -9,8 +16,14 @@
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
+  -webkit-transform: scale(var(--s, 1));
+  -ms-transform: scale(var(--s, 1));
   transform: scale(var(--s, 1));
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
   transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .button:active {
@@ -28,6 +41,8 @@
 .button .circle {
   width: 76px;
   height: 76px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
@@ -39,6 +54,8 @@
   stroke: var(--active);
   stroke-dasharray: 227px;
   stroke-dashoffset: var(--active-offset, 227px);
+  -webkit-transition: stroke-dashoffset var(--all-transition, 4s) ease var(--all-delay, 0.8s);
+  -o-transition: stroke-dashoffset var(--all-transition, 4s) ease var(--all-delay, 0.8s);
   transition: stroke-dashoffset var(--all-transition, 4s) ease var(--all-delay, 0.8s);
 }
 
@@ -53,10 +70,16 @@
   font-size: 10px;
   color: var(--active);
   opacity: var(--count-opacity, 0);
+  -webkit-transform: translateY(var(--count-y, 4px));
+  -ms-transform: translateY(var(--count-y, 4px));
   transform: translateY(var(--count-y, 4px));
   -webkit-animation: var(--count, none) 0.3s ease forwards var(--all-delay, 4.6s);
   animation: var(--count, none) 0.3s ease forwards var(--all-delay, 4.6s);
+  -webkit-transition: opacity 0.2s ease 0.6s, -webkit-transform 0.3s ease 0.6s;
+  transition: opacity 0.2s ease 0.6s, -webkit-transform 0.3s ease 0.6s;
+  -o-transition: opacity 0.2s ease 0.6s, transform 0.3s ease 0.6s;
   transition: opacity 0.2s ease 0.6s, transform 0.3s ease 0.6s;
+  transition: opacity 0.2s ease 0.6s, transform 0.3s ease 0.6s, -webkit-transform 0.3s ease 0.6s;
 }
 
 .button .icon {
@@ -78,9 +101,15 @@
   top: 0;
   stroke-dasharray: 0 33px var(--line-array, 33px) 66px;
   stroke-dashoffset: var(--line-offset, 33px);
+  -webkit-transform: translateY(var(--line-y, 0));
+  -ms-transform: translateY(var(--line-y, 0));
   transform: translateY(var(--line-y, 0));
   opacity: var(--line-opacity, 1);
+  -webkit-transition: stroke-dasharray 0.2s, stroke-dashoffset 0.2s, -webkit-transform 0.32s ease var(--all-delay, 0.25s);
+  transition: stroke-dasharray 0.2s, stroke-dashoffset 0.2s, -webkit-transform 0.32s ease var(--all-delay, 0.25s);
+  -o-transition: stroke-dasharray 0.2s, stroke-dashoffset 0.2s, transform 0.32s ease var(--all-delay, 0.25s);
   transition: stroke-dasharray 0.2s, stroke-dashoffset 0.2s, transform 0.32s ease var(--all-delay, 0.25s);
+  transition: stroke-dasharray 0.2s, stroke-dashoffset 0.2s, transform 0.32s ease var(--all-delay, 0.25s), -webkit-transform 0.32s ease var(--all-delay, 0.25s);
 }
 
 .button .icon div {
@@ -91,8 +120,14 @@
   left: 50%;
   bottom: 1px;
   margin-left: -20px;
+  -webkit-transform: translate(var(--icon-x, 0), var(--icon-y, 0));
+  -ms-transform: translate(var(--icon-x, 0), var(--icon-y, 0));
   transform: translate(var(--icon-x, 0), var(--icon-y, 0));
+  -webkit-transition: -webkit-transform 0.3s ease var(--all-delay, 4.8s);
+  transition: -webkit-transform 0.3s ease var(--all-delay, 4.8s);
+  -o-transition: transform 0.3s ease var(--all-delay, 4.8s);
   transition: transform 0.3s ease var(--all-delay, 4.8s);
+  transition: transform 0.3s ease var(--all-delay, 4.8s), -webkit-transform 0.3s ease var(--all-delay, 4.8s);
   -webkit-animation: var(--overflow, none) 0s linear forwards var(--all-delay, 4.8s);
   animation: var(--overflow, none) 0s linear forwards var(--all-delay, 4.8s);
 }
@@ -108,16 +143,26 @@
   width: var(--w, 16px);
   background: var(--active);
   border-radius: 1px;
+  -webkit-transform-origin: var(--tx, 15px) 1px;
+  -ms-transform-origin: var(--tx, 15px) 1px;
   transform-origin: var(--tx, 15px) 1px;
+  -webkit-transform: rotate(var(--before-rotate, 0deg));
+  -ms-transform: rotate(var(--before-rotate, 0deg));
   transform: rotate(var(--before-rotate, 0deg));
   opacity: var(--tick-opacity, 0);
+  -webkit-transition: opacity 0s linear var(--all-delay, 4.8s), -webkit-transform 0.4s ease var(--all-delay, 4.8s);
+  transition: opacity 0s linear var(--all-delay, 4.8s), -webkit-transform 0.4s ease var(--all-delay, 4.8s);
+  -o-transition: transform 0.4s ease var(--all-delay, 4.8s), opacity 0s linear var(--all-delay, 4.8s);
   transition: transform 0.4s ease var(--all-delay, 4.8s), opacity 0s linear var(--all-delay, 4.8s);
+  transition: transform 0.4s ease var(--all-delay, 4.8s), opacity 0s linear var(--all-delay, 4.8s), -webkit-transform 0.4s ease var(--all-delay, 4.8s);
 }
 
 .button .icon div:after {
   --l: 14px;
   --w: 26px;
   --tx: 1px;
+  -webkit-transform: rotate(var(--after-rotate, 0deg));
+  -ms-transform: rotate(var(--after-rotate, 0deg));
   transform: rotate(var(--after-rotate, 0deg));
 }
 
@@ -129,6 +174,8 @@
   width: 40px;
   height: 32px;
   opacity: var(--arrow-opacity, 1);
+  -webkit-transition: opacity 0s linear var(--all-delay, 1s);
+  -o-transition: opacity 0s linear var(--all-delay, 1s);
   transition: opacity 0s linear var(--all-delay, 1s);
 }
 
@@ -138,9 +185,15 @@
   position: absolute;
   left: 0;
   top: 11px;
+  -webkit-transform: translateX(var(--progress-x, 0));
+  -ms-transform: translateX(var(--progress-x, 0));
   transform: translateX(var(--progress-x, 0));
   opacity: var(--progress-opacity, 0);
+  -webkit-transition: opacity 0s linear var(--all-delay, 1s), -webkit-transform var(--all-transition, 4.4s) ease var(--all-delay, 0.4s);
+  transition: opacity 0s linear var(--all-delay, 1s), -webkit-transform var(--all-transition, 4.4s) ease var(--all-delay, 0.4s);
+  -o-transition: transform var(--all-transition, 4.4s) ease var(--all-delay, 0.4s), opacity 0s linear var(--all-delay, 1s);
   transition: transform var(--all-transition, 4.4s) ease var(--all-delay, 0.4s), opacity 0s linear var(--all-delay, 1s);
+  transition: transform var(--all-transition, 4.4s) ease var(--all-delay, 0.4s), opacity 0s linear var(--all-delay, 1s), -webkit-transform var(--all-transition, 4.4s) ease var(--all-delay, 0.4s);
   -webkit-animation: var(--hide, none) 0s linear forwards var(--all-delay, 4.8s);
   animation: var(--hide, none) 0s linear forwards var(--all-delay, 4.8s);
 }
@@ -184,6 +237,7 @@
 
 @-webkit-keyframes count {
   to {
+    -webkit-transform: translateY(4px);
     transform: translateY(4px);
     opacity: 0;
   }
@@ -191,6 +245,7 @@
 
 @keyframes count {
   to {
+    -webkit-transform: translateY(4px);
     transform: translateY(4px);
     opacity: 0;
   }
@@ -209,15 +264,18 @@
 }
 
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
 
 * {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 *:before,
 *:after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }

@@ -1,6 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
 
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -17,9 +25,20 @@ body {
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.active-choice {
+    background: linear-gradient(to right, rgba(110, 210, 244, 0.538) 0%, rgba(137, 157, 236, 0.8) 96%) !important;
 }
 
 .card {
@@ -30,10 +49,18 @@ body {
     z-index: 1;
     overflow-x: hidden;
     background-color: rgba(255, 255, 255, 1);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     border-radius: 10px;
+    -webkit-box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
@@ -63,6 +90,8 @@ body {
 }
 
 .card.is-active .card-avatar {
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
     left: 20px;
     width: 50px;
@@ -73,6 +102,8 @@ body {
 .card.is-active .card-fullname,
 .card.is-active .card-jobtitle {
     left: 86px;
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
 }
 
@@ -89,14 +120,21 @@ body {
 
 .card-header {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 200px;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 100%;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
 .card-header * {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -110,21 +148,31 @@ body {
     will-change: top;
     background-size: cover;
     background-position: center;
+    -webkit-filter: blur(30px);
     filter: blur(30px);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     transform: scale(1.2);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
 .card-avatar {
     width: 100px;
     height: 100px;
+    -webkit-box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
+    -o-object-position: center;
     object-position: center;
+    -o-object-fit: cover;
     object-fit: cover;
     position: absolute;
     bottom: 0;
     left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-64px);
+    -ms-transform: translateX(-50%) translateY(-64px);
     transform: translateX(-50%) translateY(-64px);
 }
 
@@ -135,6 +183,8 @@ body {
     font-weight: 700;
     text-align: center;
     white-space: nowrap;
+    -webkit-transform: translateY(-10px) translateX(-50%);
+    -ms-transform: translateY(-10px) translateX(-50%);
     transform: translateY(-10px) translateX(-50%);
     left: 50%;
 }
@@ -150,15 +200,30 @@ body {
     letter-spacing: 1.5px;
     margin: 0;
     left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-7px);
+    -ms-transform: translateX(-50%) translateY(-7px);
     transform: translateX(-50%) translateY(-7px);
 }
 
 .card-main {
     position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+}
+
+.flex-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .card-subtitle {
@@ -181,7 +246,11 @@ body {
 }
 
 .card-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0 20px;
     margin-bottom: 30px;
@@ -191,6 +260,8 @@ body {
     fill: #a5b5ce;
     width: 16px;
     display: block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -199,9 +270,17 @@ body {
     height: 32px;
     width: 32px;
     border-radius: 50%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     background-color: rgba(93, 133, 193, 0.05);
     border-radius: 50%;
@@ -217,6 +296,8 @@ body {
 }
 
 .card-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: #fff;
     margin-top: auto;
@@ -227,7 +308,12 @@ body {
 
 .card-buttons .card-button {
     text-align: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     background: 0;
     font-size: 13px;
@@ -235,6 +321,8 @@ body {
     padding: 15px 5px;
     cursor: pointer;
     color: #5c5c6d;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     font-family: "Jost", sans-serif;
     font-weight: 500;
@@ -246,6 +334,8 @@ body {
 .card-buttons .card-button:hover {
     color: #2b2c48;
     border-bottom: 3px solid #8a84ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(127, 199, 231, 0)), color-stop(44%, rgba(207, 204, 255, 0.2)), to(rgba(211, 226, 255, 0.4)));
+    background: -o-linear-gradient(top, rgba(127, 199, 231, 0) 0%, rgba(207, 204, 255, 0.2) 44%, rgba(211, 226, 255, 0.4) 100%);
     background: linear-gradient(to bottom, rgba(127, 199, 231, 0) 0%, rgba(207, 204, 255, 0.2) 44%, rgba(211, 226, 255, 0.4) 100%);
 }
 
@@ -255,12 +345,26 @@ body {
 
 .card-section.is-active {
     display: block;
+    -webkit-animation: fadeIn 0.6s both;
     animation: fadeIn 0.6s both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translatey(40px);
+        transform: translatey(40px);
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeIn {
     0% {
         opacity: 0;
+        -webkit-transform: translatey(40px);
         transform: translatey(40px);
     }
 
@@ -275,6 +379,8 @@ body {
 }
 
 .card-timeline:after {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(134, 214, 243, 0)), to(rgba(81, 106, 204, 1)));
+    background: -o-linear-gradient(bottom, rgba(134, 214, 243, 0) 0%, rgba(81, 106, 204, 1) 100%);
     background: linear-gradient(to top, rgba(134, 214, 243, 0) 0%, rgba(81, 106, 204, 1) 100%);
     content: "";
     left: 42px;
@@ -312,6 +418,8 @@ body {
     text-indent: -35px;
     border-radius: 50%;
     color: rgba(134, 134, 134, 0.7);
+    background: -webkit-gradient(linear, left top, left bottom, from(#a0aee3), to(#516acc));
+    background: -o-linear-gradient(top, #a0aee3 0%, #516acc 100%);
     background: linear-gradient(to bottom, #a0aee3 0%, #516acc 100%);
 }
 
@@ -333,7 +441,11 @@ body {
 }
 
 .card-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-size: 13px;
     color: #6f6f7b;
@@ -347,10 +459,13 @@ body {
 }
 
 .card-contact svg {
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 30px;
     min-height: 34px;
     margin-right: 12px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     padding-right: 12px;
     border-right: 1px solid #dfe2ec;
@@ -359,7 +474,10 @@ body {
 .contact-me {
     border: 0;
     outline: none;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(83, 200, 239, 0.8)), color-stop(96%, rgba(81, 106, 204, 0.8)));
+    background: -o-linear-gradient(left, rgba(83, 200, 239, 0.8) 0%, rgba(81, 106, 204, 0.8) 96%);
     background: linear-gradient(to right, rgba(83, 200, 239, 0.8) 0%, rgba(81, 106, 204, 0.8) 96%);
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     color: #fff;
     padding: 12px 16px;
@@ -370,13 +488,19 @@ body {
     font-size: 14px;
     font-weight: 500;
     font-family: "Jost", sans-serif;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
-.start-game {
+.start-game,
+.button-choice {
     border: 0;
     outline: none;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(83, 200, 239, 0.8)), color-stop(96%, rgba(81, 106, 204, 0.8)));
+    background: -o-linear-gradient(left, rgba(83, 200, 239, 0.8) 0%, rgba(81, 106, 204, 0.8) 96%);
     background: linear-gradient(to right, rgba(83, 200, 239, 0.8) 0%, rgba(81, 106, 204, 0.8) 96%);
+    -webkit-box-shadow: 0 4px 6px rgb(0 0 0 / 15%);
     box-shadow: 0 4px 6px rgb(0 0 0 / 15%);
     color: #fff;
     padding: 6px 9px;
@@ -387,5 +511,7 @@ body {
     font-size: 14px;
     font-weight: 500;
     font-family: "Jost", sans-serif;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
