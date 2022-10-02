@@ -18,7 +18,17 @@
       English Cards
       <br>
       <button class="mui-btn mui-btn--raised" data-change-content>Toggle Form</button>
-      <a href="../index.html" class="mui-btn mui-btn--raised">Comback</a>
+      <div class="mui-dropdown">
+        <button class="mui-btn mui-btn--white" data-mui-toggle="dropdown">
+          <span id="unit-flag">Unit 1</span>
+          <span class="mui-caret"></span>
+        </button>
+        <ul class="mui-dropdown__menu mui-dropdown__menu--right" data-units>
+          <li><a>Unit 1</a></li>
+          <li><a>Unit 2</a></li>
+          <li><a>Unit 3</a></li>
+        </ul>
+      </div>
     </div>
   </div>
   <div id="content" class="mui-container-fluid">
@@ -41,9 +51,9 @@
           <button type="submit" id="submit" disabled class="mui-btn mui-btn--raised mui-btn--primary">
             Save vords
           </button>
-          <a href="../admin/cms01.html" class="mui-btn mui-btn--raised mui-btn--primary">
-            Go app
-          </a>
+          <span class="go-app">
+            <!-- ... -->
+          </span>
         </form>
         <br>
         <br>
@@ -68,6 +78,7 @@
         <br><br>
         <div class="mui-panel">
           <strong>Vords List</strong>
+          <strong class="total-vords"></strong>
         </div>
         <table class="mui-table">
           <thead>
@@ -77,13 +88,13 @@
             </tr>
           </thead>
           <tbody id="render-vords">
-
+            <!-- ... -->
           </tbody>
         </table>
       </div>
     </div>
   </div>
 
-<script type="text/javascript" src="bundle.f0d2a65871d786d5b239.js"></script></body>
+<script type="text/javascript" src="bundle.b8b5d4d80b5e9fa84302.js"></script></body>
 
 </html>

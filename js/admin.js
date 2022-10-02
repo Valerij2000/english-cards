@@ -1,7 +1,8 @@
 var KanjiArray = [{}];
+let unit = document.querySelector('[data-page]').getAttribute('data-page');
 
-function getVords() {
-	return fetch('https://english-cards-674c2-default-rtdb.firebaseio.com/vords.json', {
+function getVords(unit) {
+	return fetch(`https://english-cards-674c2-default-rtdb.firebaseio.com/${unit}.json`, {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json'
@@ -17,7 +18,7 @@ function getVords() {
 			}
 		});
 }
-getVords();
+getVords(unit);
 
 var Card = (function Card(kanjilist) {
 	var kanji;
