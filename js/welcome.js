@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll(".card-buttons button");
 const sections = document.querySelectorAll(".card-section");
 const card = document.querySelector(".card");
-const link = document.querySelector('[data-link-log]');
+const link = document.querySelector('[data-link-admin]');
 const buttonTemplateVords = document.querySelector('[button-template]');
 const buttonUniqeVords = document.querySelector('[button-uniqe]');
 const containerUniqe = document.querySelector('[data-uniqe-vords]');
@@ -33,4 +33,4 @@ const handleButtonClick = (e) => {
 buttons.forEach((btn) => {
     btn.addEventListener("click", handleButtonClick);
 });
-link.addEventListener('click', () => window.location.href = './login.html');
+link.addEventListener('click', () => window.location.href = './public/index.html');
