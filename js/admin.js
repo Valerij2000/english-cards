@@ -37,6 +37,15 @@ var Card = (function Card(kanjilist) {
 		bindUI();
 		newCard();
 		toggleLng();
+		keydownNewCard();
+	}
+
+	function keydownNewCard() {
+		document.addEventListener('keydown', function (event) {
+			if (event.code == 'Space') {
+				handleClick();
+			}
+		});
 	}
 
 	function toggleLng() {
