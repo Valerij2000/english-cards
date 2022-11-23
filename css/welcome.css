@@ -515,3 +515,7 @@ body {
     -o-transition: 0.3s;
     transition: 0.3s;
 }
+
+.mw-100 {
+    min-width: 100%;
+}

@@ -1,0 +1,70 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 360px;
+  overflow: hidden;
+}
+
+.swiper {
+  margin: 0 auto;
+  width: 20rem;
+  height: 32rem;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: #e2b8b8;
+  border: 2px solid #e4cccc;
+  border-radius: 5px;
+  font-size: 2rem;
+  line-height: 1.4;
+  -webkit-box-shadow: 0 4px 20px -3px gray;
+  box-shadow: 0 4px 20px -3px gray;
+  padding: 20px;
+  outline: none;
+}
+
+@media (max-width: 479px) {
+  .swiper-slide {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+}
