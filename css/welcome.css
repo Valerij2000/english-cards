@@ -405,7 +405,7 @@ body {
 }
 
 .card-item:after {
-    content: attr(data-year);
+    content: '';
     width: 10px;
     position: absolute;
     top: 0;
