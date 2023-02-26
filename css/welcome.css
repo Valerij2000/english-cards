@@ -41,6 +41,10 @@ body {
     background: linear-gradient(to right, rgba(110, 210, 244, 0.538) 0%, rgba(137, 157, 236, 0.8) 96%) !important;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 .card {
     max-width: 340px;
     margin: auto;

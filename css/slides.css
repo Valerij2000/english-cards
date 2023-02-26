@@ -51,6 +51,7 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
+  flex-direction: column;
   background: #e2b8b8;
   border: 2px solid #e4cccc;
   border-radius: 5px;
@@ -60,6 +61,10 @@ body {
   box-shadow: 0 4px 20px -3px gray;
   padding: 20px;
   outline: none;
+}
+
+.swiper-slide__text:not(:last-child) {
+  margin-bottom: 40px;
 }
 
 @media (max-width: 479px) {
